@@ -9,7 +9,10 @@ import { ThemeProviderProps } from '@mui/material/styles/ThemeProvider';
 
 export interface AppThemeProviderProps extends Partial<ThemeProviderProps> {}
 
-export const AppThemeProvider = ({ children, ...props }: AppThemeProviderProps) => {
+export const AppThemeProvider = ({
+  children,
+  ...props
+}: AppThemeProviderProps) => {
   return (
     <AppRouterCacheProvider>
       <ThemeProvider {...props} theme={lightTheme}>

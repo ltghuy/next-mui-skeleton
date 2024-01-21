@@ -17,6 +17,7 @@ export const palette: PaletteOptions = {
   },
   divider: 'rgba(23, 106, 200, 0.12)',
   customColor: {
-    main: '#FF9843',
+    main: '#ff9999',
+    darker: '#FF9843',
   },
 };

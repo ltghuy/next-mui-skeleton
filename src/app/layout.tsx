@@ -1,5 +1,5 @@
 import { poppinsFont } from '@/assets/fonts';
-import { CoreAvatar, CoreStack } from '@/components/core';
+import { SWRProvider } from '@/contexts/swr';
 import { AppThemeProvider } from '@/contexts/theme';
 import type { Metadata } from 'next';
 
@@ -17,10 +17,7 @@ export default function RootLayout({
     <html lang='en' className={poppinsFont.className}>
       <body>
         <AppThemeProvider>
-          <CoreStack>
-            <CoreAvatar />
-            {children}
-          </CoreStack>
+          <SWRProvider>{children}</SWRProvider>
         </AppThemeProvider>
       </body>
     </html>
